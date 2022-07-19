@@ -2,3 +2,5 @@
 .local-history/
 .vscode/
 .idea/
+
+server/node_modules/
