@@ -1,7 +1,7 @@
 FROM alpine:3.14
 
 # Installing dependencies
-RUN apk add --no-cache nodejs npm curl gzip git
+RUN apk add --no-cache nodejs-current npm curl gzip git
 
 RUN cd /tmp
 
