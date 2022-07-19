@@ -32,14 +32,8 @@ RUN npm run build
 # Installing dbml-to-azimutt
 RUN git clone --branch main https://github.com/nathabonfim59/dbml-to-azimutt.git /var/dbml-to-azimutt
 
-WORKDIR /var/dbml-to-azimutt/server
-
-RUN cd /var/dbml-to-azimutt/server
-
 ENV SERVER_ROOT=/var/azimutt/public
 ENV SERVER_PORT=5959
-
-RUN npm run build
 
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh

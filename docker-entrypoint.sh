@@ -1,5 +1,5 @@
 #!/usr/bin/env ash
 
-cd /var/dbml-to-azimutt/server
+cd /var/azimutt
 
-npm start
+npm run dev
