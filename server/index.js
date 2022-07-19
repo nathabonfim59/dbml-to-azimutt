@@ -8,6 +8,7 @@ const port = process.env.SERVER_PORT
 
 app.use(cors())
 app.use('/', express.static(root_dir))
+app.use('/dist', express.static(root_dir + '/dist'))
 
 app.listen(port, () => {
   console.log('\n\n\n')
