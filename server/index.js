@@ -1,10 +1,11 @@
 const env = require('dotenv')
 const express = require('express')
+var serveIndex = require('serve-index')
 const app = express()
 const root_dir = process.env.SERVER_ROOT
 const port = process.env.SERVER_PORT
 
-app.use('/', express.static(root_dir))
+app.use('/', express.static(root_dir), serveIndex('public', {'icons': true}))
 
 app.listen(port, () => {
   console.log('\n\n\n')

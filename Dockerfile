@@ -36,7 +36,7 @@ WORKDIR /var/dbml-to-azimutt/server
 
 RUN cd /var/dbml-to-azimutt/server
 
-ENV SERVER_ROOT=/var/dbml2azimutt/public
+ENV SERVER_ROOT=/var/azimutt/public
 ENV SERVER_PORT=5959
 
 RUN npm run build
