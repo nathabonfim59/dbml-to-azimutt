@@ -6,7 +6,7 @@ const root_dir = process.env.SERVER_ROOT
 const port = process.env.SERVER_PORT
 
 
-app.use(cors)
+app.use(cors())
 app.use('/', express.static(root_dir))
 
 app.listen(port, () => {
