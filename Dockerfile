@@ -1,6 +1,6 @@
 FROM alpine:3.14
 
-# Instalando dependências
+# Installing dependencies
 RUN apk add --no-cache nodejs npm curl gzip git
 
 RUN cd /tmp
@@ -16,7 +16,7 @@ RUN mv elm /usr/local/bin/
 RUN npm install -g elm-spa@6.0.4
 
 
-# Clonando repositório do projeto
+# Cloning the azimutt repository
 RUN mkdir /var/azimutt
 
 WORKDIR /var/azimutt
@@ -28,3 +28,12 @@ RUN cd /var/azimutt
 RUN npm install
 
 RUN npm run build
+
+# Installing dbml-to-azimutt
+RUN git clone --branch main https://github.com/nathabonfim59/dbml-to-azimutt.git /var/dbml-to-azimutt
+
+RUN cd /var/dbml-to-azimutt/server
+
+RUN npm install
+
+RUN npm run start
