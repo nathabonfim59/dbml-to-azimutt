@@ -41,8 +41,6 @@ ENV SERVER_PORT=5959
 
 RUN npm run build
 
-WORKDIR /var/azimutt
-
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
