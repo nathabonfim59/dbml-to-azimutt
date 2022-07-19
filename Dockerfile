@@ -32,8 +32,13 @@ RUN npm run build
 # Installing dbml-to-azimutt
 RUN git clone --branch main https://github.com/nathabonfim59/dbml-to-azimutt.git /var/dbml-to-azimutt
 
+WORKDIR /var/dbml-to-azimutt/server
+
 RUN cd /var/dbml-to-azimutt/server
 
-RUN npm install
+ENV SERVER_ROOT=/var/dbml2azimutt/public
+ENV SERVER_PORT=5959
 
-RUN npm run start
+RUN npm run build
+
+WORKDIR /var/azimutt
