@@ -11,6 +11,7 @@ app.listen(port, () => {
   console.log('===========================================================')
   console.log(` 📣 Dbml2Azimutt server started on port ${port}`)
   console.log('')
+  console.log(` 📁 Container folder: ${root_dir}/`)
   console.log(` 🌐 Location: http://localhost:${port}/`)
   console.log('-----------------------------------------------------------')
   console.log(' ⭐ us on Github: github.com/nathabonfim59/dbml-to-azimutt')
