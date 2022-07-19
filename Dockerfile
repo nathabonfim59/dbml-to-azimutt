@@ -13,7 +13,7 @@ RUN chmod +x elm
 
 RUN mv elm /usr/local/bin/
 
-RUN npm install -g elm-spa@6.0.4
+RUN npm install -g elm-spa@6.0.4 elm-live
 
 
 # Cloning the azimutt repository
